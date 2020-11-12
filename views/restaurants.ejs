@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>All Restaurants</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	</head>	
+	<body>
+		
+	<style>
+        body {
+            background-color: rgb(236, 226, 226);
+        }
+        .container h1
+        {
+        	font-weight: bold;
+        	color: white; 
+        	/*rgb(255, 18, 18);*/
+        	padding: 10px 10px;
+        	border: 2px solid rgb(255,255,51);
+        	border-radius: 10px;
+        	background: rgba(255, 253, 199, 0.2);
+        }
+        .container p
+        {
+        	color: white;
+        	font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Restaurant Review</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/restaurants">HOME</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/abhinav-b2940b131">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="/contactUs">CONTACT US</a>
+                    </li>
+                    <li>
+                        <a href="/addRestaurant">ADD RESTAURANT</a>
+                    </li>
+                </ul>
+                <div class="collapse navbar-collapse">
+                    <ul class=" nav navbar-nav navbar-right">
+                        <li><span style="color:antiquewhite; padding-top:15px; margin:15px;">Welcome<br><%=currentUser.username%></span>
+                        </li>
+                        <li><a href="/login">LOGOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <div class="container">
+        <header class="jumbotron" style="background-image: url(https://i.pinimg.com/originals/c0/cc/68/c0cc6805ba552bee3b46af18ea3775a0.jpg);">
+            <div class="container">
+                <h1>Welcome To Restaurant Review</h1>
+                <p>
+                    Widest Range Of Delivery Restaurants | Trusted Eative Ratings |
+                    Unlimited Choices
+                </p>
+                
+                   <!--  <a class="btn btn-primary btn-large" href="#">Sorted By Ratings</a> -->
+                
+            </div>
+        </header>
+        <div class="row text-center" style="display:flex;flex-wrap:wrap;">
+            <% restaurants.forEach(function(restaurant){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= restaurant.image %>">
+                    <div class="caption">
+                        <h4 style="font-style: italic;font-weight: bold;"><%= restaurant.name %></h4>
+                        <span
+                            style="color:aliceblue; font-weight:bold;background-color:rgb(236, 127, 25);;;padding:5px;border-radius: 5px;">
+                            <%= restaurant.avgRating %></span>
+
+                    </div>
+                    <p>
+                        <a href="/restaurants/<%= restaurant._id %>" class="btn btn-primary">More Info</a>
+
+                    </p>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+    <p style="text-align: center;"> Trademark Restaurant Review 2020</p>
+
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	</body>
+</html>

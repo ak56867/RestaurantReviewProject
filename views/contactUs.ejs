@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact us</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+		<style>
+	        body {
+	            background-image: url('https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+	            /* Center and scale the image nicely */
+	            background-position: center;
+	            background-repeat: no-repeat;
+	            background-size: cover;
+	            width: 100%;
+	            height: 100vh;
+	            background-color: #f0f4f7;
+	        }
+   		</style>
+	</head>
+
+<body>
+     <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Restaurant Review</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/restaurants">HOME</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/abhinav-b2940b131">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="/contactUs">CONTACT US</a>
+                    </li>
+                    <li>
+                        <a href="/addRestaurant">ADD RESTAURANT</a>
+                    </li>
+                </ul>
+                <div class="collapse navbar-collapse">
+                    <ul class=" nav navbar-nav navbar-right">
+                        <li><span style="color:antiquewhite; padding-top:15px; margin:15px;">Welcome<br><%=currentUser.username%></span>
+                        </li>
+                        <li><a href="/login">LOGOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align:center;color: black;font-style: italic; font-size: 50px "><strong>Restaurant Review</strong></h1>
+
+            <p style="text-align:center;">We would love to hear from you!</p>
+
+
+
+            <div style="width:30%;margin:25px auto;">
+                <form action="/owners/add" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="your name" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="your email" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="city" placeholder="city" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="phone" placeholder="Phone Number" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="description" placeholder="Message" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block ">Submit!</button>
+                    </div>
+                </form>
+                <a href="/restaurants">Go Back</a>
+            </div>
+        </div>
+    </div>
+   <p style="text-align: center;"> Trademark Restaurant Review 2020</p>
+</body>
+
+</html>

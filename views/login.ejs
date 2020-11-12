@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+		<style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+        .container
+        {
+        	margin: 100px auto;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <h1 style="text-align: center; color: black;font-style: italic; font-size: 50px">Login</h1> 
+            <div style="width: 30%; margin: 25px auto; ">
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="name" style="color: black;font-style: italic; font-size: 20px">Username</label>
+                        <input type="text" name="username" id="name" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color: black;font-style: italic; font-size: 20px">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" required="">
+                    </div>
+                    <button type="submit" class="btn btn-info">Login</button>
+                    <button class="btn btn-info">Login By Google</button>
+                    <button class="btn btn-warning">Reset Password</button>
+                    Don't have an account? <a href="/signup">Signup</a>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

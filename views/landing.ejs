@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Restaurant Review</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/3c6db3bb6d.js" crossorigin="anonymous"></script>
+        <style>
+        body {
+            background-color: #f0f4f7;
+            overflow-x: hidden;
+        }
+        .carousel-item {
+            height: 450px;
+        }
+        .carousel-image-1 {
+            background: url(https://royalcurryhouse.com/wp-content/uploads/2020/02/227-2276958_indian-restaurant-food-hd.jpg);
+            background-size: cover;
+        }
+        .carousel-image-2 {
+            background: url(https://images.unsplash.com/photo-1596024066892-80218db55240?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+            background-size: cover;
+        }
+        .carousel-image-3 {
+            background: url(https://images.unsplash.com/photo-1524010235651-6318320e3276?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+        }
+        #home-heading {
+            position: relative;
+            min-height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 20vh;
+            text-align: center;
+            color: #fff;
+        }
+        .dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        #gallery {
+            background-color: #FFF0F5;
+        }
+        #gallery h1
+        {
+        	margin: 10px;
+        	font-weight: bold;
+        }
+        #main-footer {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+	</head>
+	<body>
+		
+		<!-- SHOWCASE SLIDER -->
+    <section id="showcase">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel-image-1 active">
+                    <div class="container">
+                        <div class="carousel-caption  mb-5">
+                            <h1 class="mb-5">
+                                <span
+                                    style="background-color:rgb(236, 56, 56) ;font-size:80px; border-radius:8px; padding:20px; font-style: italic;">
+                                    &nbsp;Restaurant Review&nbsp;
+                                </span>
+                            </h1>
+
+                            <a href="/restaurants" class="btn btn-lg btn-danger">View All Restaurants</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item carousel-image-2">
+                    <div class="container">
+                        <div class="carousel-caption  mb-5">
+                            <h1 class="mb-5">
+                                <span
+                                    style="background-color:rgb(236, 56, 56) ;font-size:80px; border-radius:8px; padding:20px;">
+                                    &nbsp;Restaurant Review&nbsp;
+                                </span>
+                            </h1>
+
+                            <a href="/restaurants" class="btn btn-primary btn-lg">View Restaurants</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item carousel-image-3">
+                    <div class="container">
+                        <div class="carousel-caption   mb-5">
+                            <h1 class="mb-5">
+                                <span
+                                    style="background-color:rgb(236, 56, 56) ;font-size:80px; border-radius:8px; padding:20px;">
+                                    &nbsp;Restaurant Review&nbsp;
+                                </span>
+                            </h1>
+
+                            <a href="/restaurants" class="btn btn-success btn-lg">View Restaurants</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+
+            <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+
+    <!--HOME ICON SECTION  -->
+    <section id="home-icons" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-2 text-center">
+                    <i class="fas fa-mug-hot fa-3x mb-2"></i>
+                    <h3>Cafe`s & Luxury Dining</h3>
+
+                </div>
+                <div class="col-md-4 mb-2 text-center">
+                    <i class="fa fa-glass-cheers fa-3x mb-2"></i>
+                    <h3>Drinks & Night Life</h3>
+
+                </div>
+                <div class="col-md-4 mb-2 text-center">
+                    <i class="fas fa-shopping-cart fa-3x mb-2"></i>
+                    <h3>Pocket Friendly Delivery</h3>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOME HEADING SECTION -->
+    <section id="home-heading" class="p-5">
+        <div class="dark-overlay">
+            <div class="row">
+                <div class="col">
+                    <div class="container pt-5">
+                        <h1>Are You Ready To Get Started?</h1>
+                        <p class="d-none d-md-block">Explore the curated lists of top restaurants, cafes, pubs, and bars
+                            in Delhi NCR, based on trends</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO SECTION -->
+    <section id="info" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <h3>Restaurant Review<span style="background-color:gold; color:white; padding:5px;border-radius:5px;margin: 5px">Gold</span></h3>
+                    <p>Experience new places in your city every day and enjoy limitless dining privileges!</p>
+                    <a href="#" class="btn btn-outline-danger btn-lg">Learn More</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1503591099259-a96e250e0a67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                        alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PHOTO GALLERY -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h1 class="text-center">Photo Gallery</h1>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <a href="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                        data-toggle="lightbox" data-gallery="img-gallery" data-height="320" data-width="510">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                            alt="" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        data-toggle="lightbox" data-gallery="img-gallery" data-height="320" data-width="510">
+                        <img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        data-toggle="lightbox" data-gallery="img-gallery" data-height="312" data-width="510">
+                        <img src="https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <a href="https://images.unsplash.com/photo-1414438359676-7b001e93aa49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        data-toggle="lightbox" data-gallery="img-gallery" data-height="312" data-width="510">
+                        <img src="https://images.unsplash.com/photo-1414438359676-7b001e93aa49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                            alt="" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="https://images.unsplash.com/photo-1541856644905-bd40b138cbbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        data-toggle="lightbox" data-gallery="img-gallery" data-height="312" data-width="510">
+                        <img src="https://images.unsplash.com/photo-1541856644905-bd40b138cbbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                            alt="" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="https://images.unsplash.com/photo-1558447828-309b45e54554?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        data-toggle="lightbox" data-gallery="img-gallery" data-height="312" data-width="510">
+                        <img src="https://images.unsplash.com/photo-1558447828-309b45e54554?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                            alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Copyright &copy;
+                        <span id="year"></span> Restaurant Review</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	</body>
+</html>
