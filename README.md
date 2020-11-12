@@ -5,7 +5,7 @@ Backend development is done using Node.js,mongoDB
 
 To include the dependencies
 open gitbash terminal and type
-npm install <package name> --save
+npm install package name --save
   
 Steps to run:
 open powershell and type command : mongod
